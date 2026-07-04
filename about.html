@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마곡 유흥 할인 정보 | 마곡 술집 & 클럽 상세 안내</title>
+    <meta name="description" content="마곡 유흥 할인 정보를 상세하게 알려드려요! 마곡에서 가장 핫한 유흥주점, 클럽, 바 할인 혜택을 실시간으로 확인하고, 친구랑 부담 없이 즐기는 마곡 밤문화, 지금 전화주세요.">
+    <meta name="keywords" content="마곡 유흥 할인, 마곡 술집 할인, 마곡 클럽 할인, 마곡 유흥주점, 마곡 밤문화, 마곡 회식 장소, 마곡 가성비 술집">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <link rel="canonical" href="https://t3b08-mg-night-sale-1.vercel.app/">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="마곡 유흥 할인 | 마곡 최저가 술집 & 클럽">
+    <meta property="og:description" content="마곡 유흥 할인 정보 한곳에! 지금 전화하면 할인 적용">
+    <meta property="og:type" content="website">
+    <style>
+        /* CSS Reset 및 기본 스타일 */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #faf7f2;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        /* 컨테이너 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 타이포그래피 */
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #4a4a4a;
+        }
+        a {
+            color: #d4a574;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #b8895e;
+        }
+        /* 버튼 */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: #d4a574;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #b8895e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #d4a574;
+            color: #d4a574;
+        }
+        .btn-outline:hover {
+            background-color: #d4a574;
+            color: #fff;
+        }
+
+        /* 네비게이션 */
+        .nav-present {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        .nav-present .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-present .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        .nav-present .logo span {
+            color: #d4a574;
+        }
+        .nav-present .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-present .nav-links a {
+            color: #4a4a4a;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-present .nav-links a:hover {
+            color: #d4a574;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: #1a1a1a;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* 헤더 */
+        header {
+            padding: 80px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #faf7f2 0%, #f0e6d8 100%);
+        }
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* 카드 그리드 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 60px 0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            color: #d4a574;
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* FAQ 섹션 */
+        .faq-section {
+            padding: 60px 0;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .tel-link {
+            color: #d4a574;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        .tel-link:hover {
+            color: #b8895e;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .responsive-768 {
+                padding: 0 15px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .nav-present .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 1rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+            .nav-present .nav-links.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 0;
+            }
+            header {
+                padding: 60px 0 40px;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="nav-present">
+        <div class="container">
+            <a href="/" class="logo">마곡<span>할인</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about">정보</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <h1>마곡 유흥 할인, 완벽 가이드</h1>
+            <p>형, 마곡에서 술 마실 때 돈 아끼는 꿀팁 다 모았어. 할인 정보부터 분위기 좋은 곳까지, 내가 직접 발로 뛰어서 알려줄게!</p>
+            <a href="tel:010-1234-5678" class="btn">📞 지금 전화해서 할인 받기</a>
+        </div>
+    </header>
+
+    <!-- 상세 정보 섹션 -->
+    <section class="container responsive-768">
+        <div class="card-grid">
+            <div class="card">
+                <h3>🍻 마곡에서 가장 핫한 유흥주점</h3>
+                <p>야, 진짜 마곡 유흥주점 중에 가성비 원탑은 여기야. 내가 저번주에 친구들이랑 갔는데, 칵테일이 2+1이더라고? 게다가 분위기도 미쳤어. 어두운 조명에 감성 음악까지. 형이 가면 꼭 전화해서 예약해. 할인 적용해준다니까?</p>
+            </div>
+            <div class="card">
+                <h3>🎉 클럽 할인 팁: 입장료 아끼는 법</h3>
+                <p>마곡 클럽 가면 보통 입장료가 부담되잖아? 근데 우리 사이트 통해서 전화하면 입장료 면제는 기본이고, 테이블도 할인된 가격에 예약 가능해. 지난주에 갔을 때 3만원 테이블을 1만원에 썼어. 실화임. 형, 지금 바로 전화해봐!</p>
+            </div>
+            <div class="card">
+                <h3>🥂 바 할인: 데이트 코스 추천</h3>
+                <p>여친이랑 마곡에서 데이트할 때 여기 바 완전 좋아. 와인 1+1 이벤트 중이고, 분위기가 너무 로맨틱해. 내가 저번에 깜짝 이벤트로 꽃다발 준비했는데, 직원분들이 도와줘서 완전 성공했어. 형도 한 번 가봐. 후회 없을 거야.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 섹션 -->
+    <section class="faq-section container responsive-768">
+        <h2 style="text-align: center; margin-bottom: 2rem;">마곡 유흥 할인, 궁금한 점 다 물어봐!</h2>
+        <div class="faq-item">
+            <h3>❓ 마곡에서 가장 할인 많이 해주는 술집은?</h3>
+            <p>형, 솔직히 말하면 업소마다 다 달라. 근데 우리 사이트랑 제휴된 곳들은 기본 10~30% 할인은 기본이야. 특히 전화해서 "마곡할인 보고 왔어요" 하면 추가 할인 받을 수 있더라고. 내가 지난주에 40% 할인 받았어!</p>
+        </div>
+        <div class="faq-item">
+            <h3>❓ 회식 장소로 추천할 만한 곳 있어?</h3>
+            <p>오, 회식이면 마곡에서 가장 큰 유흥주점 추천해. 단체석이 완비되어 있고, 노래방 시설까지 있어. 게다가 회식 특가로 10인 이상이면 병당 5천원 할인! 우리 회사도 저번에 거기서 했는데 다들 만족했어. 형도 전화해서 물어봐.</p>
+        </div>
+        <div class="faq-item">
+            <h3>❓ 클럽에서 여자친구랑 가도 괜찮아?</h3>
+            <p>완전 괜찮아! 오히려 커플 할인 이벤트 하는 곳도 있어. 커플 칵테일 세트가 2만원인데, 할인 받으면 1만 2천원이야. 분위기도 좋고, 직원들도 친절해서 데이트 코스로 딱이야. 형, 꼭 전화해서 확인해봐.</p>
+        </div>
+        <div class="faq-item">
+            <h3>❓ 예약 없이 그냥 가도 할인 받을 수 있어?</h3>
+            <p>야, 그건 좀 위험해. 보통 예약 없이 가면 할인이 적용 안 되는 경우가 많거든. 근데 우리 사이트에서 전화하면 실시간으로 할인 적용해주니까, 꼭 전화하고 가. 내가 저번에 안 하고 갔다가 5만원 더 냈어... 후회했지.</p>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2025 마곡 유흥 할인 - 모든 권리 보유</p>
+            <p>문의 및 예약: <a href="tel:010-1234-5678" class="tel-link">010-1234-5678</a></p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">본 사이트는 만 19세 이상 성인을 대상으로 합니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 토글
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
